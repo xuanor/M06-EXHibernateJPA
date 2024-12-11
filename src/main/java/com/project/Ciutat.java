@@ -85,13 +85,11 @@ public class Ciutat implements Serializable {
 
     public void addCiutada(Ciutada ciutada) {
         ciutadans.add(ciutada);
-        // Ensure proper bidirectional relationship setup if needed
         ciutada.setCiutat(this);
     }
 
     public void removeCiutada(Ciutada ciutada) {
         ciutadans.remove(ciutada);
-        // Ensure proper bidirectional relationship teardown if needed
         ciutada.setCiutat(null);
     }
 
